@@ -10,7 +10,7 @@ $results = [];
 
 if (!empty($_GET['project'])) {
     foreach ($data as $d) {
-        if (strtolower($_GET['project']) == strtolower($d)) {
+        if (trim(strtolower($_GET['project'])) == strtolower($d)) {
             $results[] = $d;
         }
     }
