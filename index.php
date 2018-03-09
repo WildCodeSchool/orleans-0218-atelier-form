@@ -41,7 +41,7 @@ if (!empty($_GET['project'])) {
         </div>
         <div class="row text-center">
             <div class="col-md-12">
-                <form class="form-inline">
+                <form class="form-inline" method="get">
                     <div class="form-group">
                         <input type="text" name="project" class="form-control" placeholder="Project name">
                     </div>
