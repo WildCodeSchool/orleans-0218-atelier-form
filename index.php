@@ -9,8 +9,10 @@ $data = ['Hyperloop', 'SpaceX', 'Tesla'];
 $results = [];
 
 if (!empty($_GET['project'])) {
+    $userInput = trim(strtolower($_GET['project']));
+    $nbCars = strlen($userInput);
     foreach ($data as $d) {
-        if (trim(strtolower($_GET['project'])) == strtolower($d)) {
+        if ($userInput == substr(strtolower($d), 0, $nbCars)) {
             $results[] = $d;
         }
     }
